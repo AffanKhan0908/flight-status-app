@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flight Status Updates</title>
+</head>
+<body>
+    <h1>Flight Status Updates</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Flight Number</th>
+                <th>Status</th>
+                <th>Departure</th>
+                <th>Gate</th>
+                <th>Time</th>
+                <th>Airline</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for flight in flights %}
+            <tr>
+                <td>{{ flight.flightNumber }}</td>
+                <td>{{ flight.status }}</td>
+                <td>{{ flight.departure }}</td>
+                <td>{{ flight.gate }}</td>
+                <td>{{ flight.Time }}</td>
+                <td>{{ flight.airline }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
